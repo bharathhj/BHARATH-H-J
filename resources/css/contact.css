@@ -1,0 +1,486 @@
+ /* mint white : #ecf0f1; */
+/** --------------------------------------  **/
+/**          Basic steps   font-family: 'Redressed', cursive;                 **/
+/** --------------------------------------  **/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    
+    
+    font-family: 'Lato', 'Arial', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+}
+
+.clearfix {zoom: 1}
+.clearfix:after {
+    content: '.';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+
+/** --------------------------------------  **/
+/**        Reusable components              **/
+/** --------------------------------------  **/
+
+
+.row {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+section {
+    padding: 80px 0;       
+}
+
+.box {
+    padding: 2%;
+}
+
+
+/* ------ Headings  ----- */
+
+h1,
+h2,
+{ 
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+h1 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: aliceblue;
+    font-size: 250%;
+    word-spacing: 3px;
+    letter-spacing: 1px;
+}
+
+h2 {
+    font-size: 170%;
+    word-spacing: 2px;
+    text-align: center;
+    margin-bottom: 30px;  
+    letter-spacing: 1px;
+}
+
+h2:after {
+    display: block;
+    height: 2px;
+    background-color: #002633;
+    content: " ";
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+
+
+/* ------ Paragrahs ----- */
+
+.long-copy{
+    line-height: 145%;
+    width: 72%;
+    margin-left: 15%;
+}
+
+.box p {
+    font-size: 90%;
+    line-height: 145%;
+}
+
+
+.menu1 a:hover{
+    border-bottom: none;
+}
+.menu {
+    color: #ffffff;
+    font-size: 175%;
+}
+.menu:link,
+.menu:visited {
+    color: #daf2fa;
+}
+.menu:active,
+.menu:hover {
+    color: rgba(173, 173, 173, 0.25);
+}
+ 
+
+
+/* ------ Links ----- */
+
+.items a:link,
+.items a:visited {
+    
+    text-decoration: none;
+    padding-bottom: 1px;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom 0.2s, color 0.2s; 
+}
+
+.itemsa:hover,
+.items a:active {
+    
+    border-bottom: 1px solid #aab1bd;
+}
+
+
+
+/** --------------------------------------  **/
+/**        Header of Contact Info           **/
+/** --------------------------------------  **/
+
+.container {
+    /* The image used */
+   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/herocontactcover.jpg);
+
+}
+
+.parallax {   
+  /* Set a specific height */
+  height: 100vh;
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hero-text-box{   
+    position: absolute;
+    width: 1140px;
+    top: 50%;
+    left: 52%;
+    transform: translate(-50%, -50%);
+}
+
+.cardbody{
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    position: relative;
+    margin-right: 650px;
+    width: 508px;
+    height: 298px;
+    transform-style: preserve-3d;
+    perspective: 500px;
+}
+
+.card .face{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    transform-style: preserve-3d;
+    transition: 1s;
+    backface-visibility: hidden;
+}
+
+
+.card:hover .face.front{
+    transform: rotateY(180deg);
+}
+
+.card .face.back{
+    transform: rotateY(180deg);
+}
+
+.card:hover .face.back{
+    transform: rotateY(360deg);
+}
+
+.card .face.front::before
+{
+    content: '';
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+    width: 60px;
+    height: 60px;
+    background: #fff;
+    border-radius: 50%;
+    opacity: 0.65;
+}
+
+
+.card .face.front::after
+{
+    content: '';
+    position: absolute;
+    bottom: 40px;
+    right: 80px;
+    width: 60px;
+    height: 60px;
+    background: #fff;
+    border-radius: 50%;
+    opacity: 0.7;
+}
+
+.card .face.front .debit{
+    position: absolute;
+    left: 40px;
+    top: 30px;
+    color: #fff;
+    font-weight: 200;
+    font-size: 20px;
+}
+
+.card .face.front .bank{
+    position: absolute;
+    right: 40px;
+    top: 30px;
+    color: #fff;
+    font-weight: 500;
+    font-style: italic;
+    font-size: 24px;
+}
+
+.card .face.front .chip{
+    position: absolute;
+    top: 80px;
+    left: 50px;
+    max-width: 64px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
+.card .face.front .number{
+    position: absolute;
+    bottom: 130px;
+    left: 40px;
+    color: #eef7ff;
+    font-weight: 500;
+    letter-spacing: 6px;
+    font-size: 18px;
+    text-shadow: 0 2px 1px #0005;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.card .face.front .valid{
+    position: absolute;
+    bottom: 86px;
+    left: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-weight: 300;
+    line-height: 1em;
+    text-align: right;
+}
+
+.card .face.front .valid span:last-child{
+    margin-left: 20px;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+.card .face.front .cardholder{
+    position:absolute;
+    bottom: 42px;
+    left: 40px;
+    color: #fff;
+    font-weight: 300;
+    font-size: 16px;
+    letter-spacing: 2px;
+}
+
+.card .face.back .blackbar{
+    position: absolute;
+    top: 40px;
+    width: 100%;
+    height: 60px;
+    background: #000;
+}
+
+.card .face.back .ccvtext{
+    position: absolute;
+    top: 120px;
+    left: 30px;
+}
+
+.card .face.back .ccvtext h5{
+    color: #fff;
+    font-weight: 400;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.card .face.back .ccvtext .whitebar{
+    position: relative;
+    width: 370px;
+    height: 40px;
+    background: #fff;
+    margin-top: 5px;
+}
+
+.card .face.back .ccvtext .ccv{
+    position: relative;
+    background: rgba(204, 204, 204, 0.67);
+    top:-35px;
+    left: 370px;
+    color: #000;
+    width: 50px;
+    height: 30px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card .face.back .text{
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    right: 30px;
+    color: #fff;
+    font-size: 10px;
+    line-height: 1.4em;
+    font-weight: 300;
+    text-align: justify;
+}
+
+.logo {
+    height: 100px;
+    width: auto;
+    float: left;
+    margin-top: 20px;
+}
+
+.logo-black {
+    display: none;
+    height: 70px;
+    width: auto;
+    float: left;
+    margin-top: 7px 0;
+}
+
+.signup-loginpage {
+    height: 70px;
+    width: auto;
+    float: left;
+    margin-top: 7px 0;
+}
+
+/* main nav */
+.main-nav {
+    float: right;
+    list-style: none;
+    margin-top: 55px;
+}
+
+.main-nav li {
+    display: inline-block;
+    margin-left: 40px;
+}
+
+.main-nav li a:link,
+.main-nav li a:visited {
+    padding: 8px 0;
+    color: azure;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 90%;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.2s;
+}
+
+.main-nav li a:hover,
+.main-nav li a:active {
+    border-bottom: 1px solid #bcbcbc;
+}
+
+
+/* Mobile navi */
+.mobile-nav-icon {
+    float: right;
+    margin-top: 30px;
+    cursor: pointer;
+    display: none;
+}
+
+.mobile-nav-icon icon-icon {
+    font-size: 200%;
+    color: #fff;
+}
+
+/* Sticky navi */
+.sticky {
+    color: #212121;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255 ,0.98);
+    box-shadow: 0 2px 2px #efefef;
+    z-index: 9999;
+}
+
+.sticky .main-nav { margin-top: 18px; }
+
+.sticky .main-nav li a:link,
+.sticky .main-nav li a:visited {
+    margin-top: 10px;
+    padding: 7px 0;
+    color: #555;
+    border-bottom: 2px solid transparent;
+}
+
+.sticky .main-nav li a:hover,
+.sticky .main-nav li a:active {
+    
+    border-bottom: 1px solid #000;
+}
+
+.sticky .logo { display: none; }
+.sticky .logo-black { display: block; }
+
+/***  Signup Nav  ***/
+
+
+.signup-nav li a:link,
+.signup-nav li a:visited {
+    color: #1f2f53;
+    margin-top: -50px;
+    float: right;
+    width: 100%;
+    z-index: 9999;
+}
+
+.signup-nav .main-nav { margin-top: 18px; }
+
+
+.signup-nav li a:hover,
+.signup-nav li a:active {
+    color: #0d8686;
+}
+
+
+
+
+
